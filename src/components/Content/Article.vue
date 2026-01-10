@@ -35,8 +35,9 @@
     .article_box{
         display: flex;
         flex-direction: column;
-        width:320px;
-        height:300px;
+        width:200px;
+        height:200px;
+        
         background:white;
         border-radius: 8px;
         overflow: hidden;
@@ -49,7 +50,7 @@
 
     .article_image{
         position: relative;
-        height: 180px;
+        height: 110px;
     }
 
     .article_image img{
@@ -73,15 +74,18 @@
     .title{
         display: flex;
         justify-content: flex-start;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 1.3;
+        font-weight: bold;
     }
     .bottom_data{
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 6px;
+        gap: 3px;
         margin-top: auto;
+        font-size: 12px;
+        color: #9b9b9bd7;
         }
 </style>

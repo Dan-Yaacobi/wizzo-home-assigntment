@@ -31,25 +31,27 @@
         </div>
 
         <div class="articles_box">
-            <Article v-for="article in articles" :key="article.id" :article="article" :color ="color"/>
+            <Article v-for="article in articles.slice(0,4)" :key="article.id" :article="article" :color ="color"/>
         </div>
     </div>
 </template>
 
 <style>
     /* .container{
-        background-color: white;
+        width: 80%;
     } */
     .articles_box {
         display: flex;
         justify-content: space-between;
-        gap: 12px;
         padding: 10px;
         padding-top: 20px;
+
     }
 
     .top_title{
-        display: flex;  
+        display: flex; 
+        font-size: 10px;
+        font-weight: bold;
         justify-content: space-between;
         width: 100%;
         height: auto;
