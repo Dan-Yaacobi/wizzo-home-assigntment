@@ -1,21 +1,22 @@
 <script setup>
-   import { ref } from 'vue';
+    defineProps({
+        article:{
+            type: Object,
+            required: true
+        },
+        color:{
+            type: String,
+            default: '#000000'
+        }
 
-    const article = ref({
-        tag: "נדלן למגורים",
-        title: "עוד פעם הדירות יקרות מידי, מה יהיה?",
-        date: "05-09",
-        author: "דן נדלן",
-        image: "@assets/realestate.jpeg"
     })
-
 </script>
 
 <template>
     <div class="article_box">
         <div class="article_image">
-            <img src="/src/assets/realestate.jpg">
-            <span class="tag">{{ article.tag }}</span>
+            <img :src="article.src">
+            <span class="tag" :style="{'--tag-color': color}">{{ article.tag }}</span>
         </div>
 
         <h3 class="title">{{ article.title }}</h3>
@@ -42,12 +43,13 @@
         color: black;
         direction: rtl;
         padding: 4px;
+
+        border: 1px solid #ffffff;
     }
 
     .article_image{
         position: relative;
         height: 180px;
-
     }
 
     .article_image img{
@@ -61,7 +63,7 @@
         bottom: 0px;
         right: 0px;
 
-        background: #f5c400;
+        background: var(--tag-color);
         padding: 0px 20px;
         font-size: 12px;
         font-weight: bold;
