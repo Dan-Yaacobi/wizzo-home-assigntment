@@ -43,7 +43,7 @@
     .articles_box {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        /* padding: 10px;*/
         padding-top: 20px;
 
     }
@@ -52,7 +52,7 @@
         display: flex; 
         font-size: 10px;
         font-weight: bold;
-        justify-content: space-between;
+        
         width: 100%;
         height: auto;
         align-items: baseline;
@@ -69,7 +69,7 @@
         flex-grow: 1;
         height: 2px;
         background: var(--tag-color);
-        margin: 0px 120px;
+        margin: 0px 80px;
         margin-left: 5px;
     }   
 </style>

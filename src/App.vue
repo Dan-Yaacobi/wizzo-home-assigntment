@@ -39,21 +39,74 @@
       tag="נדלן למגורים"
       color="#f5c400"
     />
+      <OtherArticles class="other_articles"
+      :articles="articles",
+      title="כותרת כלשהי על נדלן"
+      tag="נדלן למגורים"
+      color="#06c716"
+    />
+
     <div class="hor_banner">
       <Banner
         src= 'src/assets/banner.png'
-        width="500",
+        width="870",
         height="150"
       />
     </div>
+
+      <OtherArticles class="other_articles"
+      :articles="articles",
+      title="כותרת כלשהי על נדלן"
+      tag="נדלן למגורים"
+      color="#ff4fdf"
+    />
     <OtherArticles class="other_articles"
       :articles="articles",
       title="כותרת כלשהי על נדלן"
       tag="נדלן למגורים"
       color="#06c716"
     />
-  </div>
+    <div class="hor_banner">
+      <Banner
+        src= 'src/assets/banner.png'
+        width="870",
+        height="150"
+      />
+    </div>
 
+
+      <OtherArticles class="other_articles"
+      :articles="articles",
+      title="כותרת כלשהי על נדלן"
+      tag="נדלן למגורים"
+      color="#ff4fdf"
+    />
+      <OtherArticles class="other_articles"
+      :articles="articles",
+      title="כותרת כלשהי על נדלן"
+      tag="נדלן למגורים"
+      color="#06c716"
+    />
+    <div class="hor_banner">
+      <Banner
+        src= 'src/assets/banner.png'
+        width="870",
+        height="150"
+      />
+    </div>
+
+      <OtherArticles class="other_articles"
+      :articles="articles",
+      title="כותרת כלשהי על נדלן"
+      tag="נדלן למגורים"
+      color="#ff4fdf"
+    />
+
+
+
+
+
+  </div>
 </template>
 
 <style>
@@ -62,17 +115,23 @@
   }
   .page {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 
+      1fr           /* left gutter */
+      minmax(0, 870px) /* content */
+      1fr;          /* right gutter */
     background: #fbf8ff;
+    padding: 50px;
   }
   .hor_banner{
     grid-column: 2;
 
   }
   .other_articles{
-    grid-column: 2 / span 2;
+    grid-column: 2;
+    margin-top: 50px;
+    margin-bottom: 15px;
   }
   .top_articles{
-    grid-column: 2 /span 3;
+    grid-column: 2 ;
   }
 </style>
