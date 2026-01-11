@@ -27,7 +27,9 @@
             <div class="articles_tag" :style="{'--tag-color': color}">{{ tag }}</div>
             <span class="line" :style="{'--tag-color': color}"></span>
             <h1 class="articles_title">{{ title }}</h1>
-
+            <span class="mini_logo" :style="{'--tag-color': color}">
+                <img src="/src/assets/mini_logo.svg" alt="">
+            </span>
         </div>
 
         <div class="articles_box">
@@ -37,23 +39,27 @@
 </template>
 
 <style>
-    /* .container{
-        width: 80%;
-    } */
+
     .articles_box {
         display: flex;
         justify-content: space-between;
-        /* padding: 10px;*/
-        padding-top: 20px;
+        padding-top: 12px;
 
     }
-
+    .mini_logo{
+        filter: drop-shadow(-2px 3px 0 var(--tag-color));   
+        margin-left: 12px;
+    }
+    .mini_logo img{
+        height: 40px;
+        width: auto;
+        display: block;
+    }
     .top_title{
         display: flex; 
         font-size: 10px;
         font-weight: bold;
         
-        width: 100%;
         height: auto;
         align-items: baseline;
         color: black;
@@ -64,12 +70,19 @@
         font-size: 12px;
         padding: 0px 20px;
         font-weight: bold;
+
+        clip-path: polygon(
+        10px 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 10px)
     }
     .line {
         flex-grow: 1;
         height: 2px;
         background: var(--tag-color);
-        margin: 0px 80px;
+        margin: 0px 70px;
         margin-left: 5px;
     }   
 </style>

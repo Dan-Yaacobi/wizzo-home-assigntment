@@ -43,7 +43,7 @@ import main_article from '@/assets/main_article.json'
 
             <Banner
             src= 'src/assets/banner.png'
-            width="605"
+            width="610"
             height="100"/>
         </div>
 
@@ -59,6 +59,7 @@ import main_article from '@/assets/main_article.json'
     grid-template-columns: 1fr 1px 3fr;
     gap: 24px;
     width: 100%;
+    margin-top: 10px;
 }
 .top_articles_regular{
     display: grid;

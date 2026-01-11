@@ -1,22 +1,23 @@
 <script setup>
-  // // Containers:
-  import MostViewedSection from '@/components/Containers/MostViewedSection.vue'
+  // Containers:
   import OtherArticles from '@/components/Containers/OtherArticles.vue'
   import TopArticles from '@/components/Containers/TopArticles.vue'
-  // import {PodCasts} from '@/components/Containers/PodCasts.vue'
+  import PodCasts from '@/components/Containers/PodCasts.vue'
   // import {Videos} from '@/components/Containers/Videos.vue'
 
-  // // Navigation Bars
+  // Navigation Bars
   import TopNavBar from '@/components/Content/TopNavBar.vue'
-  // import {BottomNavBar} from '@/components/Content/BottomNavBar.vue'
-  // Banner:
+  import BottomNavBar from '@/components/Content/BottomNavBar.vue'
+
+  // Content:
     import Banner from '@/components/Content/Banner.vue'
+    import MainArticle from './components/Content/MainArticle.vue'
 
   // Data:
     import articles from '@/assets/articles.json'
     import main_article from '@/assets/main_article.json'
+    import podcasts from '@/assets/podcasts.json'
 
-    import MainArticle from './components/Content/MainArticle.vue'
 
 </script>
 
@@ -49,7 +50,7 @@
     <div class="hor_banner">
       <Banner
         src= 'src/assets/banner.png'
-        width="870",
+        width="855",
         height="150"
       />
     </div>
@@ -69,7 +70,7 @@
     <div class="hor_banner">
       <Banner
         src= 'src/assets/banner.png'
-        width="870",
+        width="855",
         height="150"
       />
     </div>
@@ -90,7 +91,7 @@
     <div class="hor_banner">
       <Banner
         src= 'src/assets/banner.png'
-        width="870",
+        width="855",
         height="150"
       />
     </div>
@@ -102,11 +103,15 @@
       color="#ff4fdf"
     />
 
-
-
-
+    <PodCasts class="podcasts_page"
+    :podcasts="podcasts"
+    pod_title="פודקסטים"
+    pod_tag="לעמוד המדור"
+    color="#c4126d"/>
 
   </div>
+
+    <BottomNavBar class="bottom_nav"/>
 </template>
 
 <style>
@@ -116,9 +121,9 @@
   .page {
     display: grid;
     grid-template-columns: 
-      1fr           /* left gutter */
-      minmax(0, 870px) /* content */
-      1fr;          /* right gutter */
+      1fr
+      minmax(0, 855px)
+      1fr;
     background: #fbf8ff;
     padding: 50px;
   }
@@ -134,4 +139,10 @@
   .top_articles{
     grid-column: 2 ;
   }
+.podcasts_page{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  justify-content: center;
+  grid-column: 2;
+}
 </style>

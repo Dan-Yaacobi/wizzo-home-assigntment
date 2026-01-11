@@ -69,6 +69,14 @@
         font-size: 12px;
         font-weight: bold;
 
+        clip-path: polygon(
+        10px 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 10px
+    );
+
     }
 
     .title{
